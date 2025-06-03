@@ -152,7 +152,7 @@ IF(CMAKE_COMPILER_IS_GNUCXX)
   ENDIF()
 
   # If the library is built as a static library, pass -fPIC option to the compiler
-  IF(OpenIGTLink_BUILD_GENERATE_PIC)
+  IF(OpenIGTLink_BUILD_GENERATE_PIC AND NOT WIN32)
     SET(OpenIGTLink_REQUIRED_C_FLAGS "${OpenIGTLink_REQUIRED_C_FLAGS} -fPIC")
     SET(OpenIGTLink_REQUIRED_CXX_FLAGS "${OpenIGTLink_REQUIRED_CXX_FLAGS} -fPIC")
   ENDIF()
